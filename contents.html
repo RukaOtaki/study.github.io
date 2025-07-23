@@ -22,30 +22,55 @@
 				</ul>
 			</nav>
 		</header>
-
-		<main class="container">
-			<!-- 左側の写真 -->
-    <div class="left-content">
-      <div class="photo visible">
-        <img src="image/画像1.png" alt="サンプル画像">
-        <p>はじめてでも大丈夫<br>気になるボタンから始めてみよう！</p>
-      </div>
-      <div class="text-content hidden">
-  <h1 id="title"></h1>
-  <p id="description"></p>
-  <a id="link" class="btn-link" href="#" target="_blank"></a>
-      </div>
-    </div>
-    <!-- 右側にクリック可能なボックス -->
-    <div class="link-boxes">
-      <div class="click-box" onclick="changeContent('Java','一度書けば、どこでも動く。<br>信頼と実績のプログラミング言語','detai/java.html')">Java</div>
-      <div class="click-box" onclick="changeContent('SQL', 'データを操る魔法の言葉。<br>全ての情報はここから始まる', 'detai/sql.html')">SQL</div>
-      <div class="click-box" onclick="changeContent('C言語', 'すべての始まり。<br>高速・軽量・自由自在なプログラミングの原点', 'detai/C++.html')">C言語</div>
-      <div class="click-box" onclick="changeContent('PHP', 'Webを動かす裏方ヒーロー。<br>手軽に始めて本格開発もOK', 'detai/php.html')">PHP</div>
-      <div class="click-box" onclick="changeContent('IT基礎', 'デジタル社会の読み書きそろばん。<br>全ての技術はここから始まる。', 'detai/basics.html')">IT基礎</div>
-      <div class="click-box" onclick="changeContent('アルゴリズム', '正解までの地図。<br>問題を解くためのレシピ', 'detai/algorithm.html')">アルゴリズム</div>
-    </div>
+		<main>
+			<div class="title">
+				<h1>タイトル</h1>
+				<p>説明</p>
+			</div>
+			<div class="list">
+				<a href="detai/java.html">
+					<div class="item-content">
+						<h1>Java</h1>
+					</div>
+					<h4>Java</h4>
+					<p>大規模開発からモバイルアプリまで、<br>汎用的なプログラミング言語</p>
+				</a>
+				<a href="detai/sql.html">
+					<div class="item-content">
+						<h1>SQL</h1>
+					</div>
+					<h4>SQL</h4>
+					<p>データの操作や分析にも使えるデータベース言語</p>
+				</a>
+				<a href="detai/C++.html">
+					<div class="item-content">
+						<h1>C言語</h1>
+					</div>
+					<h4>C言語</h4>
+					<p>C言語</p>
+				</a>
+				<a href="detai/php.html">
+					<div class="item-content">
+						<h1>PHP</h1>
+					</div>
+					<h4>PHP</h4>
+					<p>Web開発に適したサーバーサイド言語</p>
+				</a>
+				<a href="detai/basics.html">
+					<div class="item-content">
+						<h1>IT基礎</h1>
+					</div>
+					<h4>IT基礎</h4>
+					<p>IT基礎</p>
+				</a>
+				<a href="detai/algorithm.html">
+					<div class="item-content">
+						<h1>アルゴリズム</h1>
+					</div>
+					<h4>アルゴリズム</h4>
+					<p>アルゴリズム</p>
+				</a>
+			</div>
 		</main>
-		<script src="contents.js"></script>
 	</body>
 </html>

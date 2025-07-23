@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+
+
+h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3b3b3b;
+  font-family: "Yu Mincho", "ヒラギノ明朝 ProN", serif;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.3em;
+}
+
+h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #a3c4dc, #cfcce7, #b0d3b2); /* 紫陽花色 */
+  border-radius: 2px;
+}
+
+
+.char {
+  padding: 1.5em;
+  border-radius: 10px;
+  max-width: 950px;
+}
+
+.code {
+  margin: 2em auto;
+  max-width: 800px;
+}
+
+.code-box {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow-x: auto;
+  position: relative;
+  padding: 1em;
+  padding-top: 3em; /* ヘッダー分の余白を確保 */
+}
+
+.code-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(128, 128, 192);
+  color: #333;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 1px solid #a6c8e0;
+}
+
+.code-label {
+  font-weight: bold;
+  margin: 0.5em 0 0.2em;
+  color: #5a4d66;
+}
+
+.code-section {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 2px dashed #ccc;
+}
+
+.class-block {
+  background-color: #eef7ff;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+.method-block {
+  background-color: #f4fbf7;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+.process-block {
+  background-color: #fffbe7;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 0 1rem; /* 画面端にくっつきすぎないように */
+}
+
+.back-button,
+.next-button {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background-color: #a3c4dc; /* 紫陽花ブルー */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  font-family: "Yu Gothic", sans-serif;
+}
+
+.back-button:hover,
+.next-button:hover {
+  background-color: #7aa9c4;
+  transform: translateY(-2px);
+}
+

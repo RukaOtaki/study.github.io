@@ -1,13 +1,3 @@
-/* styles.css */
-body {
-  margin: 0; /* スクロールバーを避けるための余白なし */
-  padding: 0;
-  font-family: "游明朝体", YuMincho, "Times New Roman", serif;
-  height: 100vh; /* ビューポートの高さを全体に設定 */
-  display: flex; /* フレックスボックスを使用 */
-  justify-content: center; /* 水平方向に中央寄せ */
-  background-color: #fdf6ee; /* 背景色を設定（任意） */
-}
 /* ハンバーガーメニュー */
 /* headerは固定位置にし、画面中央配置の影響を受けないようにする */
 header {
@@ -67,4 +57,28 @@ header {
 
 .menu li a:hover {
   background-color: #555;
+}
+
+/* タイトル */
+main {
+  margin-top: 80px;
+}
+
+.title {
+  text-align: center; /* テキストを中央に寄せる */
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  color: #2d2d2d;
+  background: linear-gradient(to right, #cfcce7, #a3c4dc, #b0d3b2); /* 紫陽花系グラデーション */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Yu Mincho", "ヒラギノ明朝 ProN", serif;
+  border-bottom: 4px solid #a3c4dc;
 }

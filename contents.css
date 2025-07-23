@@ -1,195 +1,42 @@
-/* メインコンテナ */
-.container {
-  display: flex;
-  justify-content: center;       /* 水平方向の中央揃え */
-  align-items: center;           /* 垂直方向の中央揃え */
-}
-
-.text-content {
-  text-align: center;            /* テキストの中央揃え */
-}
-
-.left-content {
-	width: 800px; /* 全コンテナの6割をこの領域に割り当てる */
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  padding: 20px;
-  position: relative;
-}
-
-/* 写真エリア */
-.photo {
-  width: 60%; /* 全コンテナの6割をこの領域に割り当てる */
-  display: flex;
-  flex-direction: column; /* 縦並びにする */
-  justify-content: center;
-  align-items: center;
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列 */
+  gap: 20px; /* アイテム間の余白 */
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-.photo img {
-  max-width: 100%;
-  max-height: 80%; /* 見た目が大きくなり過ぎないよう調整 */
-  object-fit: cover;
+.list a{
+  text-decoration: none;
+  color: black;
 }
 
-/* 画像の下の説明文 */
-.photo-caption {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #333;
-  text-align: center;
-}
-
-/* ボックスリンクエリア */
-.link-boxes {
-width: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* ボックス同士の間隔 */
-  justify-content: center;
-  align-items: flex-start;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color:#fbd2be;  /* ボックス背景色 */
-  grid-template-columns: repeat(2, 1fr); /* 2列を設定 */
-}
-
-/* ボックスリンクデザイン */
-.click-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;               /* ボックスの幅 */
-  height: 120px;               /* ボックスの高さ */
-  background-color: #fdf6ee;  /* ボックス背景色 */
-  color: #f6a680;             /* 文字色（枠線と同じ色に設定） */
-  font-size: 16px;            /* 文字サイズ */
-  font-weight: bold;          /* 文字の太さ */
-  border-radius: 10px;        /* ボックスの角丸設定 */
-  border: 2px solid #f6a680;  /* 枠線を追加（太さ: 2px / 色: #f6a680） */
-  cursor: pointer;            /* ホバー時にポインター表示 */
-  text-align: center;         /* テキストの中央揃え */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
-  margin: 10px 0;             /* 外側余白 */
-    justify-content: center;       /* 水平方向の中央揃え */
-  align-items: center;           /* 垂直方向の中央揃え */
-}
-
-.click-box:hover {
-  background-color: #f6a680;
-  color: #fdf6ee;             /* 文字色（枠線と同じ色に設定） */
-  border: 2px solid #fdf6ee;  /* 枠線を追加 */
-}
-
-/* 動的コンテンツ領域 */
-.dynamic-content {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.dynamic-content h1 {
-  font-size: 24px;
-  color: #333;
-}
-
-.dynamic-content p {
-  font-size: 16px;
+.list p {
+  font-size: 0.7em;
   color: #666;
 }
 
-.dynamic-content a {
-  font-size: 16px;
-  color: #4a90e2;
-  text-decoration: none;
+.item-content {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s;
 }
 
-.dynamic-content a:hover {
-  text-decoration: underline;
+.item-content:hover {
+  transform: scale(1.05);
 }
 
-.hidden {
-  display: none !important; /* どのCSSルールにも上書きされないようにする */
+.item-content h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-h1 {
-  margin: 5px;
-  font-size: 50px;
-  color: #f6a680;
-  letter-spacing: 10px; /* 文字間隔を2pxに広げる */
-}
-
-p {
-  font-size: 1.0rem;
-  color: #f6a680;
-}
-
-/* リンクをカスタムデザイン */
-.btn-link {
-  display: inline-block; /* ボタンのようなブロック要素にする */
-  font-size: 16px; /* 文字サイズ */
-  color: #f6a680; /* 文字色 */
-  background-color: #fdf6ee; /* 背景色 */
-  padding: 12px 24px; /* リンクの内側余白（縦：12px、横：24px） */
-  border: 2px solid #f6a680; /* 枠線の太さと色 */
-  border-radius: 100px; /* 角を丸くする（完全な丸角） */
-  text-decoration: none; /* 下線を削除 */
-  cursor: pointer; /* ホバー時にポインター表示 */
-  transition: all 0.3s ease; /* デザイン変更時のアニメーション */
-}
-
-/* ホバー時のスタイル */
-.btn-link:hover {
-  background-color: #f6a680; /* 背景色を変更 */
-  color: #fdf6ee; /* 文字色を背景と反転 */
-}
-
-/* メディアクエリで画面幅850px以下のときにスタイルを変更 */
-@media screen and (max-width: 1300px) {
-  .container {
-    flex-direction: column; /* 写真とリンクボックスを縦並びに変更 */
-    align-items: center;    /* コンテナ内の要素を中央揃え */
-    gap: 0px; /* 写真とボックスリンクの間の間隔 */
+/* ▼ スマホや小さな画面のときは2列に切り替え */
+@media screen and (max-width: 768px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
   }
-
-  .link-boxes {
-    width: 700px;                     /* リンクボックス全体が画面幅いっぱいになる */
-    display: grid;                   /* グリッドレイアウトを適用 */
-    grid-template-columns: repeat(6, 1fr); /* 3列を設定 */
-    gap: 5px;                       /* ボックス間のスペース */
-  }
-  
-  /* ボックスリンクデザイン */
-  .click-box {
-	width: 100px;               /* ボックスの幅 */
-    height: 100px;               /* ボックスの高さ */
-}
-}
-
-/* メディアクエリで画面幅850px以下のときにスタイルを変更 */
-@media screen and (max-width: 800px) {
-  .container {
-    flex-direction: column; /* 写真とリンクボックスを縦並びに変更 */
-    align-items: center;    /* コンテナ内の要素を中央揃え */
-    gap: 0px; /* 写真とボックスリンクの間の間隔 */
-  }
-
-  .link-boxes {
-    width: 350px;                     /* リンクボックス全体が画面幅いっぱいになる */
-    display: grid;                   /* グリッドレイアウトを適用 */
-    grid-template-columns: repeat(3, 1fr); /* 3列を設定 */
-    gap: 10px;                       /* ボックス間のスペース */
-  }
-  
-  /* ボックスリンクデザイン */
-  .click-box {
-	width: 100px;               /* ボックスの幅 */
-    height: 100px;               /* ボックスの高さ */
-}
-.left-content {
-	width: 600px; /* 全コンテナの6割をこの領域に割り当てる */
-}
 }
