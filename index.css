@@ -1,0 +1,37 @@
+/* main要素 */
+main {
+  text-align: center; /* テキストを中央に寄せる */
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #f6a680;
+}
+
+p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  color: #f6a680;
+  margin-bottom: 50px; /* 下に20pxの余白を追加 */
+}
+
+/* リンクをカスタムデザイン */
+.btn-link {
+  display: inline-block; /* ボタンのようなブロック要素にする */
+  font-size: 16px; /* 文字サイズ */
+  color: #f6a680; /* 文字色 */
+  background-color: #fdf6ee; /* 背景色 */
+  padding: 12px 24px; /* リンクの内側余白（縦：12px、横：24px） */
+  border: 2px solid #f6a680; /* 枠線の太さと色 */
+  border-radius: 100px; /* 角を丸くする（完全な丸角） */
+  text-decoration: none; /* 下線を削除 */
+  cursor: pointer; /* ホバー時にポインター表示 */
+  transition: all 0.3s ease; /* デザイン変更時のアニメーション */
+}
+
+/* ホバー時のスタイル */
+.btn-link:hover {
+  background-color: #f6a680; /* 背景色を変更 */
+  color: #fdf6ee; /* 文字色を背景と反転 */
+}
