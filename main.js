@@ -10,3 +10,8 @@ menuIcon.addEventListener("click", () => {
     menu.style.display = "none"; // 非表示
   }
 });
+
+// main.js に追加
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});

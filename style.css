@@ -1,3 +1,12 @@
+body {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
 /* ハンバーガーメニュー */
 /* headerは固定位置にし、画面中央配置の影響を受けないようにする */
 header {

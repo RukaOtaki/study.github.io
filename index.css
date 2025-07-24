@@ -1,37 +1,77 @@
+/* ベース背景アニメーション */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #6c63ff, #b19cd9, #f0e6f6, #6c63ff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Segoe UI', 'Hiragino Kaku Gothic ProN', sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* main要素 */
 main {
-  text-align: center; /* テキストを中央に寄せる */
+  text-align: center;
+  padding: 40px;
+  animation: fadeInMain 1.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInMain {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
   margin: 0;
-  font-size: 2rem;
-  color: #f6a680;
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
 }
 
 p {
-  margin: 10px 0 0;
-  font-size: 1.2rem;
-  color: #f6a680;
-  margin-bottom: 50px; /* 下に20pxの余白を追加 */
+  margin: 20px 0 40px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
-/* リンクをカスタムデザイン */
+/* ボタン */
 .btn-link {
-  display: inline-block; /* ボタンのようなブロック要素にする */
-  font-size: 16px; /* 文字サイズ */
-  color: #f6a680; /* 文字色 */
-  background-color: #fdf6ee; /* 背景色 */
-  padding: 12px 24px; /* リンクの内側余白（縦：12px、横：24px） */
-  border: 2px solid #f6a680; /* 枠線の太さと色 */
-  border-radius: 100px; /* 角を丸くする（完全な丸角） */
-  text-decoration: none; /* 下線を削除 */
-  cursor: pointer; /* ホバー時にポインター表示 */
-  transition: all 0.3s ease; /* デザイン変更時のアニメーション */
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
-/* ホバー時のスタイル */
 .btn-link:hover {
-  background-color: #f6a680; /* 背景色を変更 */
-  color: #fdf6ee; /* 文字色を背景と反転 */
+  background-color: #fff;
+  color: #6c63ff;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }

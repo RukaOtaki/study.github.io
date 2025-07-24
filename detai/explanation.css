@@ -4,7 +4,7 @@
 
 h3 {
   position: relative;
-  display: inline-block;
+ display: block;
   font-size: 1.8rem;
   font-weight: bold;
   color: #3b3b3b;
@@ -24,6 +24,13 @@ h3::after {
   border-radius: 2px;
 }
 
+.section::after {
+  content: '';
+  display: block;
+  border-bottom: 5px dotted #ccc;
+  margin-top: 2em;
+}
+
 
 .char {
   padding: 1.5em;
@@ -34,6 +41,11 @@ h3::after {
 .code {
   margin: 2em auto;
   max-width: 800px;
+}
+
+.code span {
+  font-size: 0.8em;
+  color: #b0d3b2;
 }
 
 .code-box {
@@ -70,6 +82,15 @@ h3::after {
   padding-left: 1em;
   border-left: 2px dashed #ccc;
 }
+
+.card-box {
+  background-color: rgb(255, 255, 128);
+  border-radius: 8px;
+  overflow-x: auto;
+  position: relative;
+  padding: 1em;
+}
+
 
 .class-block {
   background-color: #eef7ff;
